@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual Environment
+venv/
+.env
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Kubernetes
+*.bak
+
+# Docker
+*.tar
+
+# Jenkins
+workspace/
+
+# Harbor
+harbor/
+
+# K3s
+kubeconfig
+
+# Temporary files
+tmp/
+temp/

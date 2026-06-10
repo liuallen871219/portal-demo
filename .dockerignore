@@ -1,0 +1,4 @@
+.git
+*.tar
+__pycache__
+*.pyc
