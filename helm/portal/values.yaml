@@ -1,0 +1,11 @@
+replicaCount: 2
+
+image:
+  repository: 172.17.69.81:8088/portal/portal
+  tag: "11"
+
+service:
+  port: 5000
+
+ingress:
+  host: portal.local

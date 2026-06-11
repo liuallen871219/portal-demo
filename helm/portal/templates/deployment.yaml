@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: portal
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: portal
+
+  template:
+    metadata:
+      labels:
+        app: portal
+
+    spec:
+      imagePullSecrets:
+      - name: harbor-secret
+
+      containers:
+      - name: portal
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 5000

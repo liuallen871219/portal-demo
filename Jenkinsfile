@@ -22,16 +22,16 @@ pipeline {
                 '''
             }
         }
-
         stage('Deploy') {
             steps {
                 sh '''
-                kubectl set image deployment/portal \
-                  portal=172.17.69.81:8088/portal/portal:${BUILD_NUMBER}
+                helm upgrade --install portal helm/portal \
+                  --set image.tag=${BUILD_NUMBER}
 
                 kubectl rollout status deployment/portal
                 '''
             }
+        }
         }
     }
 }
