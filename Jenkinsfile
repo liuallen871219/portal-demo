@@ -1,6 +1,5 @@
 pipeline {
 
-```
 agent any
 
 options {
@@ -51,7 +50,6 @@ stages {
         }
     }
 }
-```
 
 }
 
